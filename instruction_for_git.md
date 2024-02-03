@@ -259,7 +259,7 @@ git push --set-upstream origin updatereadme
 ```
 5. Переходим на свою страницу репозитория. Выбираем ветку **updatereadme** и жмем кнопку **Compare & pull request**
 
-## Заметки
+### Заметки
 
 Что бы сделать push от другого пользователя необходимо выполнить команду
 ```sh
@@ -273,9 +273,30 @@ GIT_SSH_COMMAND='ssh -i ~/.ssh/user-private-key -o IdentitiesOnly=yes' git push 
 git config remote.origin.url git@github.com:gitusername/reponame
 git config core.sshCommand "ssh -i ~/.ssh/user-private-key -o IdentitiesOnly=yes"
 ```
-# Как подружить git с github под Windows 10
+### Как подружить git с github под Windows 10
 
 Вот видео инструкция https://youtu.be/E8cIjbJMEpE
+
+## Что такое ssh
+
+SSH (англ. Secure Shell — «безопасная оболочка»[1]) — сетевой протокол прикладного уровня, позволяющий производить удалённое управление операционной системой и туннелирование TCP-соединений (например, для передачи файлов). Схож по функциональности с протоколами Telnet и rlogin, но, в отличие от них, шифрует весь трафик, включая и передаваемые пароли. SSH допускает выбор различных алгоритмов шифрования. SSH-клиенты и SSH-серверы доступны для большинства сетевых операционных систем.
+
+###  Как сгенерировать ssh ключ для github
+
+Необходимо выполнить команду
+```sh
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+Фразу пароль можно оставить пустой
+```sh
+> Enter passphrase (empty for no passphrase): [Type a passphrase]
+> Enter same passphrase again: [Type passphrase again]
+```
+
+Задайте имя ключа. В текущей директории появится два файла:
+- *new_key* - закрытый ключ. Никому его не передавайте и храните в надежном месте!!!
+- *new_key.pub* - открытый ключ. Его необходимо загрузить на github
 
 ## Как включить ssh в Windows 10
 
