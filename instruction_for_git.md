@@ -319,5 +319,8 @@ usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
 ```
 Перейдите к созданию ssh ключа.
 
+# Пример ***Pull request*** 
+![Pull request](homework.png)
+
 > Спасибо всем за внимание!
 >> С уважением, Агазаде А.В.
